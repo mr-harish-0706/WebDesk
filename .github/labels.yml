@@ -1,0 +1,31 @@
+- name: "good first issue"
+  color: "7057ff"
+  description: "Good for newcomers to open source"
+
+- name: "help wanted"
+  color: "008672"
+  description: "Extra attention or help needed from community"
+
+- name: "bug"
+  color: "d73a4a"
+  description: "Something isn't working as expected"
+
+- name: "enhancement"
+  color: "a2eeef"
+  description: "New feature or request"
+
+- name: "documentation"
+  color: "0075ca"
+  description: "Improvements or additions to documentation"
+
+- name: "security"
+  color: "ee0701"
+  description: "Security issue or vulnerability patch"
+
+- name: "linux"
+  color: "e95420"
+  description: "Specific to Linux platform integration"
+
+- name: "ui/ux"
+  color: "d4c5f9"
+  description: "User Interface or User Experience improvement"

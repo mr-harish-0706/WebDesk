@@ -1,0 +1,12 @@
+# Global owners
+*       @webdesk/core-team
+
+# Electron Main & IPC Architecture
+/electron/ @webdesk/electron-maintainers
+
+# Database & Isolated Session Engine
+/electron/main/db.ts @webdesk/database-maintainers
+/electron/main/sessionManager.ts @webdesk/security-maintainers
+
+# Security & Compliance
+/SECURITY.md @webdesk/security-maintainers

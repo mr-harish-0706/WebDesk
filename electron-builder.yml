@@ -1,0 +1,124 @@
+appId: com.webdesk.app
+productName: WebDesk
+copyright: Copyright © 2026 WebDesk Contributors
+
+directories:
+  output: release/${version}
+  buildResources: build
+
+files:
+  - dist-electron/**/*
+  - dist/**/*
+  - package.json
+
+asar: true
+asarUnpack:
+  - "**/*.node"
+
+compression: normal
+
+protocols:
+  - name: WebDesk Protocol
+    schemes:
+      - webdesk
+
+# --------------------------------------------------
+# Linux Configuration
+# --------------------------------------------------
+linux:
+  maintainer: HARISH S
+  synopsis: Universal Linux Web Application Manager
+  description: Manage and run web applications as native desktop apps with isolated profiles and workspaces.
+  category: Utility
+  icon: build/icons/icon.png
+  target:
+    - target: AppImage
+      arch:
+        - x64
+    - target: deb
+      arch:
+        - x64
+    - target: rpm
+      arch:
+        - x64
+    - target: tar.gz
+      arch:
+        - x64
+  desktop:
+    Name: WebDesk
+    Comment: Universal Linux Web Application Manager
+    Categories: Network;WebBrowser;Utility;
+    StartupWMClass: webdesk
+    StartupNotify: true
+    MimeType: x-scheme-handler/webdesk;
+    Terminal: false
+
+deb:
+  depends:
+    - libnotify4
+    - libxtst6
+    - libnss3
+    - libsecret-1-0
+    - xdg-utils
+  priority: optional
+
+rpm:
+  depends:
+    - libnotify
+    - libXtst
+    - nss
+    - libsecret
+
+# --------------------------------------------------
+# Windows Configuration
+# --------------------------------------------------
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+    - target: portable
+      arch:
+        - x64
+    - target: zip
+      arch:
+        - x64
+  icon: build/icons/icon.ico
+  publisherName: WebDesk Contributors
+  requestedExecutionLevel: asInvoker
+
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  allowElevation: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: WebDesk
+  uninstallDisplayName: WebDesk Web Application Manager
+
+# --------------------------------------------------
+# macOS Configuration
+# --------------------------------------------------
+mac:
+  target:
+    - target: dmg
+      arch:
+        - universal
+    - target: zip
+      arch:
+        - universal
+  category: public.app-category.productivity
+  icon: build/icons/icon.icns
+  hardenedRuntime: true
+  gatekeeperAssess: false
+  entitlements: build/entitlements.mac.plist
+  entitlementsInherit: build/entitlements.mac.plist
+
+dmg:
+  contents:
+    - x: 130
+      y: 220
+    - x: 410
+      y: 220
+      type: link
+      path: /Applications
