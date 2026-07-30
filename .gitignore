@@ -2,16 +2,17 @@ node_modules/
 dist/
 dist-electron/
 release/
-
 *.log
-*.tmp
+
+.vscode/
+.idea/
 
 .DS_Store
 Thumbs.db
 
-.vscode/settings.json
-
-npm-debug.log*
+*.sqlite
+*.db
+*.db-journal
 
 .env
-.env.local
+.env.*

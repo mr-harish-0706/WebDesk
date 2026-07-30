@@ -47,7 +47,7 @@
 | **Fedora / openSUSE / RHEL / Kali Linux** | `.rpm` package | ✅ Supported |
 | **Arch Linux / Manjaro / Linux Mint** | `AppImage` / Portable | ✅ Supported |
 | **Windows 10 / 11** | NSIS Installer / Portable `.exe` | ✅ Supported |
-| **macOS (Apple Silicon & Intel)** | Universal `.dmg` | ✅ Supported |
+
 
 ---
 
@@ -80,8 +80,8 @@ chmod +x WebDesk-1.0.0.AppImage
 ### Setup
 ```bash
 # 1. Clone the repository
-git clone https://github.com/webdesk/webdesk.git
-cd webdesk
+git clone https://github.com/mr-harish-0706/WebDesk.git
+cd WebDesk
 
 # 2. Install dependencies
 npm install
